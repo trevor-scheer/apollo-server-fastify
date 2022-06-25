@@ -1,17 +1,17 @@
 {
-  "name": "@apollo/typescript-repo-template",
+  "name": "apollo-server-fastify",
   "private": true,
-  "description": "A template for TypeScript projects with pre-configured tooling",
+  "description": "A Fastify integration for Apollo Server 4",
   "version": "0.0.0",
   "author": "Apollo <packages@apollographql.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/apollographql/typescript-repo-template"
+    "url": "https://github.com/apollographql/apollo-server-fastify"
   },
-  "homepage": "https://github.com/apollographql/typescript-repo-template#readme",
+  "homepage": "https://github.com/apollographql/apollo-server-fastify#readme",
   "bugs": {
-    "url": "https://github.com/apollographql/typescript-repo-template/issues"
+    "url": "https://github.com/apollographql/apollo-server-fastify/issues"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -32,17 +32,27 @@
     "watch": "tsc --build --watch"
   },
   "devDependencies": {
+    "@apollo/client": "^3.6.9",
+    "@apollo/utils.withrequired": "^1.0.0",
     "@changesets/changelog-github": "0.4.5",
     "@changesets/cli": "2.23.0",
+    "@fastify/middie": "^8.0.0",
+    "@types/cors": "^2.8.12",
     "@types/jest": "28.1.3",
     "@types/node": "14.18.21",
+    "cors": "^2.8.5",
     "cspell": "6.1.2",
     "jest": "28.1.1",
     "jest-junit": "13.2.0",
     "prettier": "2.7.1",
+    "supertest": "^6.2.3",
     "ts-jest": "28.0.5",
     "ts-node": "10.8.1",
     "typescript": "4.7.4"
+  },
+  "peerDependencies": {
+    "@apollo/server": "https://pkg.csb.dev/apollographql/apollo-server/commit/af39514d/@apollo/server",
+    "fastify": "4.x"
   },
   "volta": {
     "node": "16.15.1",
